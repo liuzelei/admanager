@@ -1,0 +1,69 @@
+﻿@model ADManager.Models.UserModel
+
+
+    <tr>
+        <td> @Html.LabelFor(model => model.Password)</td>
+        <td>@Html.EditorFor(model => model.Password)</td>
+        <td>@Html.ValidationMessageFor(model => model.Password)</td>
+    </tr>
+    <tr>
+        <td> @Html.LabelFor(model => model.PasswordConfirm)</td>
+        <td>@Html.EditorFor(model => model.PasswordConfirm)</td>
+        <td>@Html.ValidationMessageFor(model => model.PasswordConfirm)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Surname)*</td>
+        <td>@Html.EditorFor(model => model.Surname)</td>
+        <td>@Html.ValidationMessageFor(model => model.Surname)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.GivenName)*</td>
+        <td>@Html.EditorFor(model => model.GivenName)</td>
+        <td>@Html.ValidationMessageFor(model => model.GivenName)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.DisplayName)</td>
+        <td>@Html.EditorFor(model => model.DisplayName)</td>
+        <td>@Html.ValidationMessageFor(model => model.DisplayName)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Region)*</td>
+        <td>    
+            @Html.DropDownListFor(model => model.Region, (IEnumerable<SelectListItem>)ViewBag.RegionGroups)
+        </td>
+        <td>@Html.ValidationMessageFor(model => model.Region)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Divisions)*</td>
+        <td>
+            @Html.ListBoxFor(model => model.Divisions, (IEnumerable<SelectListItem>)ViewBag.DivisionGroups)
+        </td>
+        <td>@Html.ValidationMessageFor(model => model.Divisions)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Email)*</td>
+        <td>@Html.EditorFor(model => model.Email)</td>
+        <td>@Html.ValidationMessageFor(model => model.Email)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Telephone)</td>
+        <td>@Html.EditorFor(model => model.Telephone)</td>
+        <td>@Html.ValidationMessageFor(model => model.Telephone)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Mobile)</td>
+        <td>@Html.EditorFor(model => model.Mobile)</td>
+        <td>@Html.ValidationMessageFor(model => model.Mobile)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Title)</td>
+        <td>@Html.EditorFor(model => model.Title)</td>
+        <td>@Html.ValidationMessageFor(model => model.Title)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Manager)</td>
+        <td>
+            @Html.DropDownListFor(model => model.Manager, (IEnumerable<SelectListItem>)ViewBag.Managers, "无直接领导")
+        </td>
+        <td>@Html.ValidationMessageFor(model => model.Manager)</td>
+    </tr>

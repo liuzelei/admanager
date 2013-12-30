@@ -1,0 +1,63 @@
+﻿@model ADManager.Models.UserModel
+
+@{
+    ViewBag.Title = "账户详情";
+}
+
+<h2>账户详情</h2>
+
+<fieldset>
+    <legend>账户详情</legend>
+
+    <table>
+        <tr>
+            <td>@Html.LabelFor(model => model.Surname)</td>
+            <td>@Html.DisplayFor(model => model.Surname)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.GivenName)</td>
+            <td>@Html.DisplayFor(model => model.GivenName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.DisplayName)</td>
+            <td>@Html.DisplayFor(model => model.DisplayName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Account)</td>
+            <td>@Html.DisplayFor(model => model.Account)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Region)</td>
+            <td>@Html.DisplayFor(model => model.Region)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Divisions)*</td>
+            <td>@Html.DisplayFor(model => model.Divisions)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Email)</td>
+            <td>@Html.DisplayFor(model => model.Email)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Telephone)</td>
+            <td>@Html.DisplayFor(model => model.Telephone)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Mobile)</td>
+            <td>@Html.DisplayFor(model => model.Mobile)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Title)</td>
+            <td>@Html.DisplayFor(model => model.Title)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.ManagerDisplay)</td>
+            <td>@Html.DisplayFor(model => model.ManagerDisplay)</td>
+        </tr>
+  </table>
+
+</fieldset>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { account = Model.Account }) |
+    @Html.ActionLink("返回列表", "Index")
+</p>
